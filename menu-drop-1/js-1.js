@@ -4,7 +4,11 @@ document.getElementById('nav').onmouseover = function(event) {
     if(target.className == 'menu-item') {
         let a = target.getElementsByClassName('submenu');
         closeMenu();
-        a[0].style.display = 'block';    
+
+        for(let i = 0; i < a.length; i++) {
+             a[i].style.display = 'block';  
+        }
+         
     }
 };
 
