@@ -1,0 +1,107 @@
+section {
+    display: flex;
+    flex-flow: row wrap;
+    height: 500px;
+    border: 1px solid #cccccc;
+    align-items: center;
+    align-self: center;
+}
+
+
+.menu-button {
+    position: fixed;
+    left: 10px;
+    top: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 40;
+}
+
+.menu-button:hover {
+    filter: brightness(0.7);
+}
+
+.menu-lines,
+.menu-lines::after,
+.menu-lines::before {
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: #ffffff;
+}
+
+.menu-lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.menu-lines::before {
+    content: '';
+    top: 12px;
+}
+
+.menu-lines::after {
+    content: '';
+    top: -12px;
+}
+
+.burger-menu_active .menu-lines {
+    background-color: transparent;
+}
+
+.burger-menu_active .menu-lines::before {
+    top: 0;
+    transform: rotate(60deg);
+}
+
+.burger-menu_active .menu-lines::after {
+    top: 0;
+    transform: rotate(-60%);
+}
+.menu-nav {
+  position: fixed; 
+  display: flex;
+  flex-flow: column;
+  padding-top: 80px;
+  height: 100%;
+  background-color: #05080e;
+  overflow-y: auto;
+ left: -40px;
+  z-index: 20;
+}
+
+.burger-menu_active .nenu-nav {
+    left: 0;
+}
+
+.menu-link {
+    padding: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: #c2c2c2;  
+    font-size: 26px;
+}
+
+.menu-link:hover {
+    filter: brightness(0.7);
+}
+
+.menu_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 10;
+}
+
+.burger-menu_active .menu_overlay {
+    display: block;
+    background-color: #26bebe;
+}
+
