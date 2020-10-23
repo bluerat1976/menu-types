@@ -1,0 +1,25 @@
+.menu-item {
+    border: 2px solid #82c418;
+    padding: 16px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-item .submenu {
+    background-color: #015a8d;
+    width: 200px;
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+    display: none;
+    padding: 4px;    
+}
+
+.menu-item .submenu a {
+    font-size: 18px;
+    padding: 2px;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;  
+}
